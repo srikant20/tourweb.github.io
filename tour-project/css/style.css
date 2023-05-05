@@ -1,0 +1,835 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Merienda:wght@600&family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: #fff;
+  --white-gray: #c9d6df;
+  --black: #181823;
+  --dark-black: #000;
+  --light-black: #212a3e;
+  --gray: #454545;
+  --purple: #764af1;
+  --light-purple: #9772fb;
+  --pastel-purple: #b2a4ff;
+  --grey: #393e46;
+  --text: #c9d6df;
+  --nav: #9ba4b5;
+}
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+a {
+  text-decoration: none !important;
+  color: #000 !important;
+}
+
+/* Starting of Header CSS */
+.header {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 0 5px 0 var(--light-black);
+}
+.brand {
+  color: var(--purple);
+}
+.navbar-brand a {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+}
+.nav-item a.h-link {
+  color: var(--nav) !important;
+  font-size: 1.1rem;
+  border-bottom: 3px solid transparent;
+  transition: 0.1s;
+}
+.nav-item a.h-link:hover {
+  border-bottom: 3px solid var(--purple);
+  color: var(--purple) !important;
+}
+#menu-btn {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Carousel CSS Start */
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  object-position: top -200px left 0;
+}
+.carousel-caption {
+  align-items: center;
+  flex-direction: column;
+}
+.carousel-caption h6 {
+  color: var(--text);
+  text-shadow: var(--black) 1px 0 10px;
+  text-transform: capitalize;
+}
+.carousel-caption h1 {
+  text-shadow: var(--black) 1px 0px 10px;
+  font-family: "Raleway", "Courier New", Courier, monospace;
+  text-transform: uppercase;
+}
+.carousel-caption .btn {
+  background-color: var(--dark-black);
+  border-radius: 0;
+  color: var(--white);
+  text-transform: capitalize;
+  padding: 5px 15px;
+  transition: 0.4s;
+}
+.carousel-caption .btn:hover {
+  box-shadow: 0 0 5px 0 var(--black);
+  background-color: var(--purple);
+}
+/* Carousel CSS End */
+
+/* Services CSS Start  */
+.s-img {
+  width: 100%;
+  height: 80%;
+}
+.box {
+  height: 200px;
+  margin: 30px 0;
+  padding: 20px;
+  width: 100%;
+  border-radius: 5px;
+  transition: 0.4s;
+  background-color: var(--pastel-purple);
+  border: 2px solid var(--dark-black);
+}
+.box:hover {
+  box-shadow: 0 0 5px 0 var(--dark-black);
+  background-color: #d2daff;
+  border: 2px solid var(--purple);
+}
+.s-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.box .s-title {
+  color: var(--dark-black);
+  padding: 10px 0px;
+  text-align: center;
+  font-family: "Raleway", "Courier New", Courier, monospace;
+  letter-spacing: 1px;
+}
+.s-header {
+  text-align: center;
+  color: var(--light-black);
+  text-transform: capitalize;
+  font-family: "Raleway", "Courier New", Courier, monospace;
+}
+/* Services CSS End  */
+
+/* About us CSS Start  */
+.a-img img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+.about .a-text {
+  background-color: var(--text);
+  height: 300px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.about .a-text p {
+  color: var(--gray);
+}
+.about .a-text h1 {
+  font-family: "Raleway", "Courier New", Courier, monospace;
+  color: var(--dark-black);
+}
+.a-img {
+  padding: 0;
+  height: 550px;
+}
+.about {
+  margin: 50px 0;
+}
+.a-box {
+  flex-direction: row;
+  align-items: center;
+}
+.a-box .btn {
+  background-color: var(--dark-black);
+  color: var(--white);
+  border-radius: 0;
+  padding: 7px 30px;
+  text-transform: capitalize;
+  align-self: flex-end;
+  transition: 0.5s;
+}
+.a-box .btn:hover {
+  background-color: var(--purple);
+  color: var(--white);
+  border-radius: 0;
+}
+/* About us CSS End  */
+
+/* Packages CSS Start  */
+.p-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5%;
+}
+.p-img {
+  width: 100%;
+  height: 200px;
+}
+.package {
+  background-color: #f0f5f9;
+  padding: 70px 0;
+}
+.package h1 {
+  padding-bottom: 40px;
+  font-family: "Raleway", "Courier New", Courier, monospace;
+
+  text-align: center;
+  text-transform: capitalize;
+}
+.p-box {
+  background-color: var(--white-gray);
+  padding: 30px 20px;
+  border-radius: 5%;
+}
+.p-box .p-text {
+  display: flex;
+  flex-direction: column;
+}
+.p-box .p-text h5 {
+  padding: 20px 0px 5px 0;
+  font-family: "Raleway", "Courier New", Courier, monospace;
+  text-transform: capitalize;
+  font-size: 25px;
+  color: var(--light-black);
+}
+.p-box .p-text p {
+  padding: 5px 0px;
+  font-family: "Raleway", "Courier New", Courier, monospace;
+  color: var(--grey);
+}
+.p-box .btn {
+  background-color: var(--dark-black);
+  color: var(--white);
+  padding: 7px 30px;
+  text-transform: capitalize;
+  font-size: 17px;
+  align-self: flex-end;
+  transition: 0.4s;
+  border-radius: 0;
+}
+.p-box .btn:hover {
+  background-color: var(--purple);
+}
+.p-load:hover {
+  background-color: var(--purple);
+}
+.p-load {
+  background-color: var(--dark-black);
+  color: var(--white);
+  padding: 7px 30px;
+  margin: 40px 0 0 0;
+  text-transform: capitalize;
+  font-size: 17px;
+  align-self: flex-end;
+  transition: 0.4s;
+  border-radius: 0;
+}
+/* Packages CSS End  */
+/* Offer Section CSS Start  */
+
+.offer {
+  text-align: center;
+  margin: 80px 20px;
+}
+.offer .o-text h1 {
+  font-family: "Raleway", "Courier New", Courier, monospace;
+  padding: 20px 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+.offer .o-text p {
+  font-size: 20px;
+  padding: 20px 100px;
+  color: var(--purple);
+}
+.offer .o-text .btn:hover {
+  background-color: var(--purple);
+}
+.offer .o-text .btn {
+  background-color: var(--dark-black);
+  color: var(--white);
+  padding: 7px 30px;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+/*  Offer Section CSS End  */
+/* Footer CSS Start  */
+.f-link {
+  padding: 5px;
+  display: inline-block;
+  transition: all 0.5s;
+  text-transform: capitalize;
+  font-family: "Raleway";
+  color: var(--nav) !important;
+}
+a.f-link i {
+  padding-right: 5px;
+  transition: all 0.5s;
+}
+a.f-link:hover i {
+  padding-right: 15px;
+  color: var(--purple);
+}
+a.f-link:hover {
+  color: var(--purple) !important;
+}
+.f-nav {
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+footer {
+  background-color: var(--black);
+  padding: 40px 0px;
+}
+.f-header {
+  font-family: "Merienda", cursive;
+  color: var(--white);
+  margin: 15px 0;
+  transition: 0.5s;
+  position: relative;
+}
+
+.f-hr {
+  background-color: var(--purple);
+  border-width: 3px;
+}
+.creator {
+  color: white;
+  font-family: "Raleway";
+  padding-top: 20px;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+.creator a {
+  color: var(--purple) !important;
+}
+/* Footer CSS End */
+
+/* About us page css Start  */
+.a-image {
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  text-align: center;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.a-image h1 {
+  font-size: 7rem;
+  text-transform: uppercase;
+}
+.au-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.a-box1 {
+  margin: 150px 0px;
+}
+.au-text {
+  padding: 30px;
+  text-align: center;
+  height: 100%;
+}
+.au-text h1 {
+  margin: 0;
+}
+.au-text p {
+  line-height: 25px;
+  padding: 10px 0;
+  margin: 0;
+}
+.au-img {
+  height: 500px;
+  width: 100%;
+}
+.au-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.a-box2 {
+  height: 175px;
+}
+.a-img1 {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 5%;
+  border: 2px solid var(--dark-black);
+  transition: 0.5s;
+  text-transform: capitalize;
+}
+.a-img1:hover {
+  box-shadow: 0 0 5px var(--dark-black);
+}
+.a-img1 h6 {
+  padding: 10px 0;
+  color: var(--dark-black);
+  margin: 0;
+}
+.a-img1 img {
+  object-fit: cover;
+  object-position: center;
+  width: 100px;
+  height: 70%;
+}
+/* About us page css End  */
+
+/* Testimonial page css Start  */
+.testi {
+  background-color: rgb(240, 245, 249);
+  padding: 70px 0px;
+}
+.testi h1,
+.testi p {
+  font-family: "Raleway", "Courier New", Courier, monospace;
+  text-align: center;
+  padding: 10px 30px;
+}
+.testi h1 {
+  color: var(--light-black);
+  text-transform: capitalize;
+  font-size: 3rem;
+}
+.testi p {
+  font-style: italic;
+  color: var(--nav);
+}
+.t-content i {
+  font-size: 7rem;
+}
+.t-content p {
+  color: var(--light-black);
+  font-style: normal;
+  text-align: left;
+}
+.t-img {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.t-img img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 10px 0;
+  border: 4px solid var(--purple);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.t-info h6 {
+  font-family: "Raleway", "Courier New", Courier, monospace;
+  color: var(--nav);
+}
+.t-content {
+  margin-top: 30px;
+  border: 5px solid var(--purple);
+  box-shadow: 0 0 10px 0px #212a3e90;
+}
+
+/* Testimonial page css End  */
+
+/* packages CSS start  */
+.p-image h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 5rem;
+  text-shadow: var(--light-black) 1px 0 10px;
+}
+.packages .p-image {
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  text-align: center;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p-img2 {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.p-box2 img {
+  border-top-right-radius: 5%;
+  border-top-left-radius: 5%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(120%);
+  transform: scale(1);
+  transition: 0.4s;
+}
+.p-box2:hover img {
+  transform: scale(1.1);
+}
+.p-title2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  padding: 20px 0px;
+}
+.p-box2 {
+  overflow: hidden;
+  width: 100%;
+  background-color: #f0f5f9;
+  border: 4px solid var(--purple);
+  border-radius: 5%;
+  margin: 20px 0;
+  box-shadow: 0 0 10px 0px #212a3e90;
+}
+.p-box2 .p-text2 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: rgb(102, 102, 102);
+}
+.p-text2 h5 {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  margin-bottom: 15px;
+  color: var(--light-black);
+}
+.p-text2 .btn {
+  color: var(--white);
+  background-color: var(--dark-black);
+  padding: 7px 30px;
+  text-transform: capitalize;
+  align-self: flex-end;
+  transition: 0.4s;
+}
+.p-text2 .btn:hover {
+  background-color: var(--purple);
+}
+/* packages CSS End  */
+
+/* Book CSS Start  */
+.book {
+  background-image: linear-gradient(to top, #8e2de2, #4a00e0);
+  color: var(--white);
+}
+.form {
+  background-image: linear-gradient(to top, #7f00ff, #e100ff);
+  padding: 40px;
+  box-shadow: 0 0 5px var(--light-black);
+  width: 50%;
+  border-radius: 5px;
+  margin: 20px 0px 100px 0;
+}
+.label {
+  color: var(--white);
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+#name,
+#email,
+#number,
+#address,
+#location,
+#member,
+.place {
+  width: 100%;
+  padding: 8px 10px;
+  border: 3px solid var(--light-black);
+  border-radius: 5px;
+  margin: 0px 0 10px;
+}
+form .btn {
+  margin: 20px 0 0px;
+  padding: 7px 40px;
+  background-color: var(--light-black);
+  color: white;
+}
+#a_date,
+#l_date {
+  padding: 4px;
+  margin: 10px 10px;
+}
+.f-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Book CSS End  */
+
+/* media Query */
+@media only screen and (max-width: 800px) {
+  .nav.h-nav {
+    position: absolute;
+    border-top: 2px solid var(--purple);
+    background-color: var(--pastel-purple);
+    top: 100%;
+    left: -125%;
+    right: 125%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+  }
+  .nav.show {
+    left: 0;
+    right: 0%;
+  }
+  .nav-item a.h-link {
+    color: var(--dark-black) !important;
+  }
+  .nav-item a.h-link:hover {
+    color: var(--gray) !important;
+  }
+  #menu-btn {
+    display: inline-block;
+  }
+  footer {
+    font-size: 90%;
+  }
+  footer .creator,
+  footer .f-header {
+    font-size: 150%;
+  }
+  .carousel-item img {
+    height: 300px;
+    object-fit: cover;
+    object-position: top -100px left 0;
+  }
+  .p-img {
+    height: 300px;
+  }
+  .about .a-img {
+    height: 600px;
+    object-fit: cover;
+  }
+  .about .a-text .btn {
+    margin-top: auto;
+  }
+  .offer .o-text p {
+    font-size: 18px;
+    padding: 20px 10px;
+  }
+  .offer .o-text h1 {
+    font-size: 35px;
+    padding: 15px 0 10px 0;
+  }
+  .offer .o-text .btn {
+    font-size: 15px;
+    padding: 8px 30px;
+  }
+  .testi h1 {
+    font-size: 2.4rem;
+    padding: 10px 0;
+  }
+  .testi p {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+  .form {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .carousel-item img {
+    object-position: top -50px left 0;
+    object-fit: cover;
+    height: 400px;
+  }
+  .carousel-caption {
+    margin: 20px 0;
+  }
+  .carousel-item .carousel-caption h1,
+  .carousel-item .carousel-caption h6 {
+    font-size: 120%;
+  }
+  .a-text {
+    font-size: 90%;
+  }
+  .about .a-title {
+    font-size: 200%;
+  }
+  .about .a-text .btn {
+    padding: 5px 15px;
+  }
+  .a-img1 {
+    border-radius: 10px;
+  }
+  .p-image h1 {
+    font-size: 3.5rem;
+  }
+  .form {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .carousel-item img {
+    object-position: top -50px left 0;
+    object-fit: cover;
+    height: 300px;
+  }
+  .p-img {
+    height: 250px;
+  }
+  .a-text {
+    font-size: 100%;
+  }
+  .a-img {
+    height: 500px;
+  }
+  .about {
+    margin: 0;
+  }
+  .about .a-title {
+    font-size: 200%;
+  }
+  .about .a-text .btn {
+    padding: 5px 20px;
+    margin-top: auto;
+  }
+  .package {
+    padding: 40px 0;
+  }
+  .package h1 {
+    padding: 20px 0px;
+  }
+  .offer h1 {
+    font-size: 20px;
+  }
+  .offer .o-text p {
+    padding: 20px 10px;
+  }
+  .a-image h1 {
+    font-size: 4rem;
+  }
+  .testi h1 {
+    font-size: 2rem;
+    padding: 10px 0;
+  }
+  .testi p {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  .p-image h1 {
+    font-size: 3rem;
+  }
+  .form {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .carousel-item img {
+    object-position: top -50px left 0;
+    object-fit: cover;
+    height: 200px;
+  }
+  .carousel-item .carousel-caption h1,
+  .carousel-item .carousel-caption h6 {
+    font-size: 80%;
+  }
+  .carousel-item .btn {
+    font-size: 12px;
+  }
+  .a-text {
+    font-size: 90%;
+  }
+  .about .a-title {
+    font-size: 190%;
+  }
+  .about .a-img {
+    height: 350px;
+  }
+  .about .a-img img {
+    object-position: center;
+  }
+  .about .a-text .btn {
+    padding: 5px 15px;
+  }
+  .package .p-text p,
+  .p-text .btn {
+    font-size: 95%;
+  }
+  .p-text .btn {
+    padding: 5px 15px;
+  }
+  .p-box {
+    padding: 15px;
+  }
+  .package h1 {
+    font-size: 180%;
+    padding: 20px;
+  }
+  .package .p-text .p-title {
+    font-size: 130%;
+  }
+  .p-img {
+    height: 150px;
+  }
+  .offer .o-text p {
+    padding: 20px 10px;
+    font-size: 15px;
+  }
+  .a-image h1 {
+    font-size: 3rem;
+  }
+  .testi h1 {
+    font-size: 1.7rem;
+    padding: 10px 0;
+  }
+  .testi p {
+    font-size: 0.7rem;
+    padding: 10px 20px;
+  }
+  .p-image h1 {
+    font-size: 2.5rem;
+  }
+  .p-text2 h5 {
+    font-size: 120%;
+  }
+  .p-text2 p {
+    font-size: 90%;
+  }
+  .p-text2 .btn {
+    font-size: 90%;
+    padding: 5px 20px;
+  }
+  .form {
+    width: 100%;
+    padding: 20px;
+  }
+}
